@@ -1,0 +1,20 @@
+<footer>
+	<p class="footerText">{{ site.footer-description }}</p>
+	<div class="footerIcons">
+          {% for contact in site.contact-list %}
+			<a href="{{ contact.url }}">
+				<span class="fa-stack fa-1x">
+					<i class="socialIconBack fa fa-circle fa-stack-2x"></i>
+					<i class="socialIconTop fa fa-{{ contact.icon }} fa-stack-1x"></i>
+				</span>
+			</a>	
+          {% endfor %}
+
+	</div>
+	<div class="footerLinks">
+		<a href="{{ site.presskit-download-link }}">{{ site.presskit-title}}</a>		
+		{% for page in site.pages %}
+			<a href="{{ page.url | relative_url }}" target="_self">{{ page.title }}</a>
+		{% endfor %}
+	</div>
+</footer>

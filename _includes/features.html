@@ -1,0 +1,26 @@
+<div class="features">
+
+    {% for feature in site.features-list %}
+
+    {% if feature.title %}
+    <div class="feature">
+        <div>
+            <span class="fa-stack fa-1x">
+                <i class="iconBack fa fa-circle fa-stack-2x"></i>
+                <i class="iconTop fa fa-{{ feature.fontawesome-icon-name }} fa-stack-1x"></i>
+            </span>
+        </div>
+        <div class="featureText">
+            <h3>
+                {{ feature.title }}
+            </h3>
+            <p>
+                {{ feature.description }}
+            </p>
+        </div>
+    </div>
+    {% endif %}
+
+    {% endfor %}
+
+</div>
